@@ -4,9 +4,9 @@
 
 </div>
 
-[![Financial Contributors on Open Collective](https://opencollective.com/ggury-blog/all/badge.svg?label=financial+contributors)](https://opencollective.com/ggury-blog) [![Greenkeeper badge](https://badges.greenkeeper.io/bottlehs/ggury-blog.svg)](https://greenkeeper.io/)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/bottlehs/ggury-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bottlehs/ggury-blog/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/bottlehs/ggury-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bottlehs/ggury-blog/context:javascript)
+[![Financial Contributors on Open Collective](https://opencollective.com/ggury-blog/all/badge.svg?label=financial+contributors)](https://opencollective.com/ggury-blog) [![Greenkeeper badge](https://badges.greenkeeper.io/ggurys/ggury-blog.svg)](https://greenkeeper.io/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/ggurys/ggury-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ggurys/ggury-blog/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ggurys/ggury-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ggurys/ggury-blog/context:javascript)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ktdvlp-jih/ggury-blog/issues)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ff4ecb81-be61-450f-8921-f05ba056c375/deploy-status)](https://app.netlify.com/sites/friendly-empanada-f43f35/deploys)
 
@@ -23,7 +23,7 @@ In this template...
 - ⚙ Configurable
 - 📚 Netlify CMS
 
-> [About this Template](https://www.gatsbyjs.org/starters/bottlehs/ggury-blog/)
+> [About this Template](https://www.gatsbyjs.org/starters/ggurys/ggury-blog/)
 
 ## 🔗 Live Demo
 
@@ -34,7 +34,7 @@ In this template...
   <p>
     <img src="./assets/demos.png" alt="demo-image">
     <ul>
-      <li>bottlehs.com: https://bottlehs.com</li>
+      <li>ggurys.com: https://ggurys.com</li>
     </ul>
   </p>
 </details>
@@ -143,7 +143,7 @@ src
 
 ## ☕ Like it?
 
-<a href="https://www.buymeacoffee.com/bottlehs" target="_blank">
+<a href="https://www.buymeacoffee.com/ggurys" target="_blank">
   <img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >
 </a>
 
@@ -187,6 +187,6 @@ Support this project with your organization. Your logo will show up here with a 
 
 <div align="center">
 
-<sub><sup>Project by <a href="https://github.com/bottlehs">@bottlehs</a></sup></sub><small>🤩</small>
+<sub><sup>Project by <a href="https://github.com/ggurys">@ggurys</a></sup></sub><small>🤩</small>
 
 </div>

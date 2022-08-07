@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: bottlehs/ggury-blog
+  repo: ggurys/ggury-blog
   branch: main
   base_url: https://api.netlify.com
   site_domain: ggury-blog.netlify.app
