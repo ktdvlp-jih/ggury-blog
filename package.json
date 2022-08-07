@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-flat-blog",
+  "name": "ggury-blog",
   "private": true,
-  "description": "gatsby-starter-flat-blog",
+  "description": "ggury-blog",
   "version": "0.0.1",
-  "author": "ByungHun Jen <qudgns9@gmail.com>",
+  "author": "IlHun Jeon <gnsdlfwjs@gmail.com>",
   "bugs": {
-    "url": "https://github.com/bottlehs/gatsby-starter-flat-blog"
+    "url": "https://github.com/ktdvlp-jih/ggury-blog"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -58,7 +58,7 @@
     "eslint-plugin-react": "^7.23.1",
     "prettier": "2.1.2"
   },
-  "homepage": "https://github.com/bottlehs/gatsby-starter-flat-blog#readme",
+  "homepage": "https://github.com/ktdvlp-jih/ggury-blog#readme",
   "keywords": [
     "gatsby"
   ],
@@ -66,7 +66,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bottlehs/gatsby-starter-flat-blog.git"
+    "url": "git+https://github.com/ktdvlp-jih/ggury-blog.git"
   },
   "scripts": {
     "build": "gatsby build",

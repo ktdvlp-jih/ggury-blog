@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: bottlehs/gatsby-starter-flat-blog
+  repo: ktdvlp-jih/ggury-blog
   branch: main
   base_url: https://api.netlify.com
-  site_domain: gatsby-starter-flat-blog.netlify.app
+  site_domain: ggurys.com
   auth_endpoint: auth
   api_root: https://api.github.com
 

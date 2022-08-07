@@ -1,14 +1,14 @@
 <div align="center">
 
-  <img src="./assets/gatsby-starter-flat-blog.png" width="360px" />
+  <img src="./assets/ggury-blog.png" width="360px" />
 
 </div>
 
-[![Financial Contributors on Open Collective](https://opencollective.com/gatsby-starter-flat-blog/all/badge.svg?label=financial+contributors)](https://opencollective.com/gatsby-starter-flat-blog) [![Greenkeeper badge](https://badges.greenkeeper.io/bottlehs/gatsby-starter-flat-blog.svg)](https://greenkeeper.io/)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/bottlehs/gatsby-starter-flat-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bottlehs/gatsby-starter-flat-blog/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/bottlehs/gatsby-starter-flat-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bottlehs/gatsby-starter-flat-blog/context:javascript)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/bottlehs/gatsby-starter-flat-blog/issues)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/290a052e-7670-40bb-91e0-1192119e6955/deploy-status)](https://app.netlify.com/sites/gatsby-starter-flat-blog/deploys)
+[![Financial Contributors on Open Collective](https://opencollective.com/ggury-blog/all/badge.svg?label=financial+contributors)](https://opencollective.com/ggury-blog) [![Greenkeeper badge](https://badges.greenkeeper.io/bottlehs/ggury-blog.svg)](https://greenkeeper.io/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/bottlehs/ggury-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bottlehs/ggury-blog/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/bottlehs/ggury-blog.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/bottlehs/ggury-blog/context:javascript)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ktdvlp-jih/ggury-blog/issues)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ff4ecb81-be61-450f-8921-f05ba056c375/deploy-status)](https://app.netlify.com/sites/friendly-empanada-f43f35/deploys)
 
 ![screenshot](./assets/screenshot.png)
 
@@ -23,11 +23,11 @@ In this template...
 - ⚙ Configurable
 - 📚 Netlify CMS
 
-> [About this Template](https://www.gatsbyjs.org/starters/bottlehs/gatsby-starter-flat-blog/)
+> [About this Template](https://www.gatsbyjs.org/starters/bottlehs/ggury-blog/)
 
 ## 🔗 Live Demo
 
-- [Demo](https://gatsby-starter-flat-blog.netlify.app)
+- [Demo](https://ggury-blog.netlify.app)
 
 <details>
   <summary>Use case</summary>
@@ -47,14 +47,14 @@ In this template...
 
 ```sh
 # create a new Gatsby site using the blog starter
-npx gatsby new my-blog https://github.com/bottlehs/gatsby-starter-flat-blog
+npx gatsby new my-blog https://github.com/ktdvlp-jih/ggury-blog
 ```
 
 > If you are not using `npx`, following [Gatsby Getting Started](https://www.gatsbyjs.org/docs/quick-start)
 
 ```sh
 npm install -g gatsby-cli
-gatsby new my-blog https://github.com/bottlehs/gatsby-starter-flat-blog
+gatsby new my-blog https://github.com/ktdvlp-jih/ggury-blog
 ```
 
 ### 2. Start developing
@@ -84,7 +84,7 @@ You can fix meta data of blog in `/gatsby-meta-config.js` file.
 
 ### 5. Publish with [netlify](https://netlify.com)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/bottlehs/gatsby-starter-flat-blog)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ktdvlp-jih/ggury-blog)
 
 :bulb: if you want to deploy github pages, add following script to package.json
 
@@ -153,7 +153,7 @@ If you are currently writing in the Medium, consider migration with [medium-to-o
 
 ## :bug: Bug reporting
 
-[Issue](https://github.com/bottlehs/gatsby-starter-flat-blog/issues)
+[Issue](https://github.com/ktdvlp-jih/ggury-blog/issues)
 
 ## 😎 Contributing
 
@@ -165,21 +165,21 @@ If you are currently writing in the Medium, consider migration with [medium-to-o
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 
-<a href="https://github.com/bottlehs/gatsby-starter-flat-blog/graphs/contributors">
-<img src="https://opencollective.com/gatsby-starter-flat-blog/contributors.svg?width=890&button=false" />
+<a href="https://github.com/ktdvlp-jih/ggury-blog/graphs/contributors">
+<img src="https://opencollective.com/ggury-blog/contributors.svg?width=890&button=false" />
 </a>
 
 ### Financial Contributors
 
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/gatsby-starter-flat-blog/contribute)]
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/ggury-blog/contribute)]
 
 #### Individuals
 
-<a href="https://opencollective.com/gatsby-starter-flat-blog"><img src="https://opencollective.com/gatsby-starter-flat-blog/individuals.svg?width=890"></a>
+<a href="https://opencollective.com/ggury-blog"><img src="https://opencollective.com/ggury-blog/individuals.svg?width=890"></a>
 
 #### Organizations
 
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/gatsby-starter-flat-blog/contribute)]
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/ggury-blog/contribute)]
 
 ## LICENSE
 

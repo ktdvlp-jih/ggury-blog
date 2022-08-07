@@ -6,7 +6,7 @@ module.exports = {
   },
   copyright: `bottlehs`,
   description: `Your Description`,
-  siteUrl: `https://gatsby-starter-flat-blog.netlify.app`,
+  siteUrl: `https://ggury-blog.netlify.app`,
   social: {
     github: `https://github.com/bottlehs`,
     instagram: `https://instagram.com`,
@@ -20,7 +20,7 @@ module.exports = {
   naverSiteVerification: '5ea388b83eab4834c0e497523f17618e578c68b9',
   disqus: {
     use: true,
-    shortname: 'gatsby-starter-flat-blog'
+    shortname: 'ggury-blog'
   },
   buymeacoffee: {
     use: true,
