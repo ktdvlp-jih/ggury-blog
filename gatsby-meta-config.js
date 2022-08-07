@@ -16,8 +16,8 @@ module.exports = {
 
   icon: `content/assets/app-icon.png`,
   keywords: [`Java`,`Blog`,`IlHun`,`Backend`,`Study`],
-  googleAnalyticsId: 'UA-192500931-1',
-  naverSiteVerification: '5ea388b83eab4834c0e497523f17618e578c68b9',
+  googleAnalyticsId: 'UA-236866037-1',
+  naverSiteVerification: '7973458d88d8a48234aae34565b13d0387dda12d',
   disqus: {
     use: true,
     shortname: 'ggurys'
