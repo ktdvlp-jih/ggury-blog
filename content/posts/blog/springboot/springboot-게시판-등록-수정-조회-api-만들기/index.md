@@ -95,3 +95,38 @@ public class PostsService {
     }
 }
 ```
+
+## **\-PostsSaveRequestDto-**
+
+
+
+```java
+@Getter
+//@NoArgsConstructor // 기본생성자 자동 추가 lombok 어노테이션,
+@RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
+public class PostsSaveRequestDto {
+    private String title;
+    private String content;
+    private String author;
+
+    @Builder
+    public PostsSaveRequestDto(String title, String content, String author){
+        Assert.hasText(title, "title must not be empty");
+        Assert.hasText(content, "content must not be empty");
+        Assert.hasText(author, "author must not be empty");
+
+        this.title = title;
+        this.content = content;
+        this.author = author;
+    }
+
+    public Posts toEntity(){
+        return Posts.builder()
+                .title(title)
+                .content(content)
+                .author(author)
+                .build();
+
+    }
+}
+```
