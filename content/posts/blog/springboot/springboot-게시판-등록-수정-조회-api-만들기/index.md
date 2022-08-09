@@ -209,10 +209,18 @@ public class PostsApiController {
     }
 }
 ```
-  1. @RequiredArgsConstructor: 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음)), final를 사용하는 이유를 나중에 필드 값을 바꿀 일이 있어도 일일이 바꿔 줄 필요가 없기 때문입니다. , @Autowird를 사용하지 않고 해당 방법으로 생성자를 주입 하면서 Bean까지 주입
-  2. @RestController: MVC Controller에서 JSON을 반환하게 만들어줍니다. (안전하게 정보 교환하는 인터페이스)
-  3. @PostMapping: 데이터를 게시할 때 사용 (데이터 전송)
-  4. @RequestBody: 
+* ### **@RequiredArgsConstructor**
+* 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음)), final를 사용하는 이유를 나중에 필드 값을 바꿀 일이 있어도 일일이 바꿔 줄 필요가 없기 때문입니다. @Autowird를 사용하지 않고 해당 방법으로 생성자를 주입 하면서 Bean까지 주입
+
+* ### **@RestController**
+* MVC Controller에서 JSON을 반환하게 만들어줍니다. (안전하게 정보 교환하는 인터페이스)
+
+* ### **@PostMapping**
+* 데이터를 게시할 때 사용 (데이터 전송)
+
+* ### **@RequestBody**
+* HTTP 요청의 body 내용을 자바 객체로 바꾸어 줌 (글 작성 후 등록을 누르면 생성되는 body내용을 PostsSaveRequestDto 객체로 바꾸어 줌)
+  
 
 ## **\-PostsService-**
 
