@@ -208,17 +208,18 @@ public class PostsApiController {
         return postsService.save(requestDto);
     }
 }
+
 ```
-* ### **@RequiredArgsConstructor**
+### **@RequiredArgsConstructor**
 * 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음)), final를 사용하는 이유를 나중에 필드 값을 바꿀 일이 있어도 일일이 바꿔 줄 필요가 없기 때문입니다. @Autowird를 사용하지 않고 해당 방법으로 생성자를 주입 하면서 Bean까지 주입
 
-* ### **@RestController**
+### **@RestController**
 * MVC Controller에서 JSON을 반환하게 만들어줍니다. (안전하게 정보 교환하는 인터페이스)
 
-* ### **@PostMapping**
+### **@PostMapping**
 * 데이터를 게시할 때 사용 (데이터 전송)
 
-* ### **@RequestBody**
+### **@RequestBody**
 * HTTP 요청의 body 내용을 자바 객체로 바꾸어 줌 (글 작성 후 등록을 누르면 생성되는 body내용을 PostsSaveRequestDto 객체로 바꾸어 줌)
   
 
@@ -240,12 +241,16 @@ public class PostsService {
 }
 ```
 
+### **@Transactional**
+* 데이터베이스의 상태를 바꾸는 작업의 단위
+* 작업 안에서 에러가 발생할 경우 자동으로 롤백 해줍니다.
+
 ## **\-PostsSaveRequestDto-**
 
 ```java
 @Getter
-//@NoArgsConstructor // 기본생성자 자동 추가 lombok 어노테이션,
-@RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
+@NoArgsConstructor // 기본생성자 자동 추가 lombok 어노테이션,
+//@RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
 public class PostsSaveRequestDto {
     private String title;
     private String content;
@@ -272,4 +277,97 @@ public class PostsSaveRequestDto {
     }
 }
 ```
+
+### **@Getter**
+* 데이터를 가져올 때 사용 (데이터 전송)
+
+### **@NoArgsConstructor**
+* 기본생성자 자동 추가 lombok 어노테이션,
+
+### **@Builder**
+* 기본생성자 생성과 기능은 같지만 빌더 패턴 클래스라는 것으로 생성을 하는경우 각 필드마다 어떤 값을 넣어야하는지 알수있게 도와주는 어노테이션 (필드 순서가 뒤바뀌어도 에러발생 X)
+
+## **\-PostsApiControllerTest-**
+
+```java
+package com.example.book.springboot.web;
+
+/*
+ * API 테스트
+ *
+ * */
+
+import com.example.book.springboot.web.domain.posts.Posts;
+import com.example.book.springboot.web.domain.posts.PostsRepository;
+import com.example.book.springboot.web.dto.PostsSaveRequestDto;
+import org.junit.After;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat; // 이 방법을 쓰자
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class PostsApiControllerTest {
+
+    @LocalServerPort
+    private int port;
+
+    @Autowired
+    private TestRestTemplate restTemplate;
+
+    @Autowired
+    private PostsRepository postsRepository;
+
+    @After
+    public void tearDown() throws Exception {
+        postsRepository.deleteAll();
+    }
+
+    @Test
+    public void posts_registration() throws Exception {
+        // 초기값 설정
+        String title = "title";
+        String content = "content";
+        PostsSaveRequestDto requestDto = PostsSaveRequestDto.builder()
+                .title(title)
+                .content(content)
+                .author("author")
+                .build();
+
+        String url = "http://localhost:" + port + "/api/v1/posts";
+
+        // 언제
+        ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
+
+        // 그 후
+        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(responseEntity.getBody()).isGreaterThan(0L);
+
+        List<Posts> all = postsRepository.findAll();
+        assertThat(all.get(0).getTitle()).isEqualTo(title);
+        assertThat(all.get(0).getContent()).isEqualTo(content);
+    }
+}
+```
+
+### **@SpringBootTest **
+* 단위 테스트할때는 @MockMvcTest를 사용하지만 컨트롤러에서 서비스까지 넘어가는 테스트를 할때에는 전체적인 흐름을 테스트 할 수 있는 @SpringBootTest를 사용합니다.
+
+### **@@LocalServerPort**
+* 랜덤 HTTP 포트 사용
+
+### **@TestRestTemplate **
+* ????
+
+
 
