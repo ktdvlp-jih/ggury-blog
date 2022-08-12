@@ -6,7 +6,7 @@ date: 2022-08-08T13:41:06.599Z
 category: Springboot
 description: SpringBoot 게시판 등록/수정/조회 API 만들기
 tags:
-  - SpringBoot
+- SpringBoot
 ---
 # **게시판 등록/수정/조회 API 만들기**
 
@@ -29,7 +29,7 @@ API를 만들기 위해 총 3개의 클래스가 필요합니다.
   1. @Service에 사용되는 영역이며 Controller와 DAO (DAO(Data Access Object)) 의 중간 영역에서 사용
   2. @Transactional이 사용 되어야하는 영역 (rollback을 하는 영역) = 작업 실패시 되돌리기
 
- 여기서 DAO란  DB를 사용해 데이터를 조회하거나 조작하는 기능을 전담하는 영역을 의미 합니다.
+여기서 DAO란  DB를 사용해 데이터를 조회하거나 조작하는 기능을 전담하는 영역을 의미 합니다.
 
 * ### **Repository Layer**
 
@@ -47,10 +47,10 @@ API를 만들기 위해 총 3개의 클래스가 필요합니다.
   4.  비즈니스처리 담당
 
 기본적이 개념을 알았으니 해당개념에 대한 테스트 코드를 작성해 보도록 하겟습니다.
-  1. Entity클래스 Posts를 web.domain.posts 패키지에
-  2. EntityRepository인터페이스인 PostsRepository를 web.domain.posts 패키지에
-  3. PostsRepositoryTest도 작성
-<br/>
+1. Entity클래스 Posts를 web.domain.posts 패키지에
+2. EntityRepository인터페이스인 PostsRepository를 web.domain.posts 패키지에
+3. PostsRepositoryTest도 작성
+   <br/>
 
 ## **\-Posts-**
 
@@ -100,7 +100,7 @@ public class Posts {
     this.title = title;
     this.content = content;
   }
-  
+
 }
 ```
 
@@ -195,7 +195,7 @@ public class PostsRepositoryTest {
 2.  Dto인 PostsSaveRequestDto를 web.dto 패키지에
 3.  Service인 PostsService를 service.posts 패키지에 생성하겠습니다.
 
-## **\-PostsApiController-** 
+## **\-PostsApiController-**
 
 ```java
 @RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
@@ -220,7 +220,7 @@ public class PostsApiController {
 
 * ### **@RequestBody**
 * HTTP 요청의 body 내용을 자바 객체로 바꾸어 줌 (글 작성 후 등록을 누르면 생성되는 body내용을 PostsSaveRequestDto 객체로 바꾸어 줌)
-  
+
 
 ## **\-PostsService-**
 
@@ -273,8 +273,6 @@ public class PostsSaveRequestDto {
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### **@Getter**
 * 데이터를 가져올 때 사용 (데이터 전송)
 
@@ -366,4 +364,5 @@ public class PostsApiControllerTest {
 ### **@RestTemplate, @TestRestTemplate **
 * 통합 테스트 https://yjksw.github.io/spring-boot-testresttemplate/ 해당부분을 참고하길 바랍니다.
 * JPA사용안할땐 @WebMvcTest 사용 JPA 기능과 외부연동과 관련된 부분을 확인 할땐 TestRestTemplate를 사용
+
 
