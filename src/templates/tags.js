@@ -132,7 +132,6 @@ export const pageQuery = graphql`
           category
           description
           tags
-          thumbnail
         }
       }
     }
