@@ -208,18 +208,17 @@ public class PostsApiController {
         return postsService.save(requestDto);
     }
 }
-
 ```
-### **@RequiredArgsConstructor**
+* ### **@RequiredArgsConstructor**
 * 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음)), final를 사용하는 이유를 나중에 필드 값을 바꿀 일이 있어도 일일이 바꿔 줄 필요가 없기 때문입니다. @Autowird를 사용하지 않고 해당 방법으로 생성자를 주입 하면서 Bean까지 주입
 
-### **@RestController**
+* ### **@RestController**
 * MVC Controller에서 JSON을 반환하게 만들어줍니다. (안전하게 정보 교환하는 인터페이스)
 
-### **@PostMapping**
+* ### **@PostMapping**
 * 데이터를 게시할 때 사용 (데이터 전송)
 
-### **@RequestBody**
+* ### **@RequestBody**
 * HTTP 요청의 body 내용을 자바 객체로 바꾸어 줌 (글 작성 후 등록을 누르면 생성되는 body내용을 PostsSaveRequestDto 객체로 바꾸어 줌)
   
 
@@ -241,16 +240,12 @@ public class PostsService {
 }
 ```
 
-### **@Transactional**
-* 데이터베이스의 상태를 바꾸는 작업의 단위
-* 작업 안에서 에러가 발생할 경우 자동으로 롤백 해줍니다.
-
 ## **\-PostsSaveRequestDto-**
 
 ```java
 @Getter
-@NoArgsConstructor // 기본생성자 자동 추가 lombok 어노테이션,
-//@RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
+//@NoArgsConstructor // 기본생성자 자동 추가 lombok 어노테이션,
+@RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
 public class PostsSaveRequestDto {
     private String title;
     private String content;
@@ -278,6 +273,7 @@ public class PostsSaveRequestDto {
 }
 ```
 
+<<<<<<< HEAD
 ### **@Getter**
 * 데이터를 가져올 때 사용 (데이터 전송)
 
@@ -374,3 +370,5 @@ public class PostsApiControllerTest {
 
 
 
+=======
+>>>>>>> parent of 0509f46 (등록/수정/조회 update)
