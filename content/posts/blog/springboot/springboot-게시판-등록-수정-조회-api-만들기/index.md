@@ -372,6 +372,10 @@ public class PostsApiControllerTest {
 
 
 ### **테스트 결과**
-![Spring WebLayer](/assets/등록_API_테스트_결과.png "Spring WebLayer")
+
+[//]: # (![Spring WebLayer]&#40;/assets/등록_API_테스트_결과.png "Spring WebLayer"&#41;)
+
+[//]: # ()
+[//]: # (램덤 포트 실행과 insert쿼리가 실행된것을 확인 하였으니 등록기능은 완성이 되었습니다. 수정/조회 기능도 만들어보겠습니다.)
 
 
