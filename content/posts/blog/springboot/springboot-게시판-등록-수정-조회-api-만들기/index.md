@@ -371,11 +371,6 @@ public class PostsApiControllerTest {
 * JPA사용안할땐 @WebMvcTest 사용 JPA 기능과 외부연동과 관련된 부분을 확인 할땐 TestRestTemplate를 사용
 
 
-### **테스트 결과**
 
-[//]: # (![Spring WebLayer]&#40;/assets/등록_API_테스트_결과.png "Spring WebLayer"&#41;)
-
-[//]: # ()
-[//]: # (램덤 포트 실행과 insert쿼리가 실행된것을 확인 하였으니 등록기능은 완성이 되었습니다. 수정/조회 기능도 만들어보겠습니다.)
 
 
