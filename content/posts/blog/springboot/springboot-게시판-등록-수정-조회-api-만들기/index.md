@@ -366,8 +366,12 @@ public class PostsApiControllerTest {
 ### **@@LocalServerPort**
 * 랜덤 HTTP 포트 사용
 
-### **@TestRestTemplate **
-* ????
+### **@RestTemplate, @TestRestTemplate **
+* 통합 테스트 https://yjksw.github.io/spring-boot-testresttemplate/ 해당부분을 참고하길 바랍니다.
+* JPA사용안할땐 @WebMvcTest 사용 JPA 기능과 외부연동과 관련된 부분을 확인 할땐 TestRestTemplate를 사용
 
+
+### **테스트 결과**
+![Spring WebLayer](/assets/등록_API_테스트_결과.png "Spring WebLayer")
 
 
