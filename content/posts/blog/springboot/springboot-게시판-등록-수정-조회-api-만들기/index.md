@@ -274,6 +274,7 @@ public class PostsSaveRequestDto {
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### **@Getter**
 * 데이터를 가져올 때 사용 (데이터 전송)
 
@@ -366,9 +367,3 @@ public class PostsApiControllerTest {
 * 통합 테스트 https://yjksw.github.io/spring-boot-testresttemplate/ 해당부분을 참고하길 바랍니다.
 * JPA사용안할땐 @WebMvcTest 사용 JPA 기능과 외부연동과 관련된 부분을 확인 할땐 TestRestTemplate를 사용
 
-
-
-
-
-=======
->>>>>>> parent of 0509f46 (등록/수정/조회 update)
