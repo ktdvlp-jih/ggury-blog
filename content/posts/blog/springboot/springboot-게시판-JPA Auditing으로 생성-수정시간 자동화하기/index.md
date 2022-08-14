@@ -8,12 +8,12 @@ description: SpringBoot 게시판 JPA Auditing으로 생성-수정시간 자동�
 tags: 
 - SpringBoot0
 ---
-# **게시판 JPA Auditing으로 생성-수정시간 자동화하기**
+# **게시판 JPA Auditing으로 생성/수정시간 자동화하기**
 
 
 보통 Entity에는 데이터의 생성,수정시간이 포함되어있습니다. 매번 데이터를 등록수정을 해야하는데 이런 단순 반복적인 코드를 모든 테이블과 서비스 메소드에 포함되어야 한다면 코드가 지저분해지기 때문에 이 문제를 해결할 JPA Auditing을 사용해 보겠습니다.
 
-* ### **날짜와 시간 출력 API  **
+* ## **\-날짜와 시간 출력 API-**
   1. LocalDate: 날짜 정보출력
   2. LocalTime: 시간 정보출력
   3. LocalDateTime: 날짜와 시간 정보출력
