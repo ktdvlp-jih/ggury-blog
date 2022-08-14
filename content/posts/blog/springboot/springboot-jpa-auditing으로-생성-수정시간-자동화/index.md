@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 draft: false
-title: SpringBoot JPA Auditing으로 생성//수정시간 자동화
+title: SpringBoot JPA Auditing으로 생성,수정시간 자동화
 date: 2022-08-12T16:09:34.830Z
 category: springboot
 description: Entity에는 데이터의 생성/수정시간이 포함되어 있는데 매번 DB에 삽입하고 갱신 하기전 등록/수정하는 코드가 들어가게
