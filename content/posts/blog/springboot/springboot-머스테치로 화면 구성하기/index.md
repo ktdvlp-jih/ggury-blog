@@ -47,7 +47,6 @@ public class IndexController {
 }
 ```
 
-
 ## **\-IndexControllerTest-**
 ```java
 @RunWith(SpringRunner.class)
