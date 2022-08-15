@@ -6,7 +6,7 @@ date: 2022-08-14T20:44:06.599Z
 category: SpringBoot
 description: SpringBoot 게시판 JPA Auditing으로 생성-수정시간 자동화하기
 tags: 
-- SpringBoot0
+- SpringBoot
 ---
 # **게시판 JPA Auditing으로 생성/수정시간 자동화하기**
 

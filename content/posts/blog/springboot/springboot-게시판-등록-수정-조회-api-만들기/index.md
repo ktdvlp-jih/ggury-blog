@@ -6,7 +6,7 @@ date: 2022-08-08T13:41:06.599Z
 category: SpringBoot
 description: SpringBoot 게시판 등록/수정/조회 API 만들기
 tags: 
-- SpringBoot0
+- SpringBoot
 ---
 # **게시판 등록/수정/조회 API 만들기**
 

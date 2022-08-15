@@ -6,7 +6,7 @@ date: 2022-08-15T02:57:06.599Z
 category: SpringBoot
 description: SpringBoot 게시글 등록 화면 만들기
 tags: 
-- SpringBoot0
+- SpringBoot
 ---
 # **게시글 등록 화면 만들기**
 앞에서는 PostsApiController로 API를 구성했으나 여기선 바로 화면으로 개발하겠습니다.

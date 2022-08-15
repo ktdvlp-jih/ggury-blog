@@ -6,7 +6,7 @@ date: 2022-08-14T23:30:06.599Z
 category: SpringBoot
 description: SpringBoot 머스테치로 화면 구성하기
 tags: 
-- SpringBoot0
+- SpringBoot
 ---
 # **머스테치로 화면 구성하기**
 
