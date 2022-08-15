@@ -70,9 +70,9 @@ const Bio = () => {
               @{author.name}
             </Link>{" "}
           </p>
-          {author.summary && (
-            <p className="bio-introduction">{author.summary}</p>
-          )}
+          {/*{author.summary && (*/}
+          {/*  <p className="bio-introduction">{author.summary}</p>*/}
+          {/*)}*/}
           <ul className="bio-social">
           <li>
               <Link to={`/rss.xml`} target="_blank" itemProp="url" className="social-icon-rss">
@@ -86,27 +86,27 @@ const Bio = () => {
               </Link>
             </li>
           )}
-          {social.instagram && (
-            <li>
-              <Link to={social.instagram} target="_blank" itemProp="url" className="social-icon-instagram">
-                <FontAwesomeIcon icon={faInstagramSquare}  />
-              </Link>
-            </li>
-          )}
-          {social.twitter && (
-            <li>
-              <Link to={social.twitter} target="_blank" itemProp="url" className="social-icon-twitter">
-               <FontAwesomeIcon icon={faTwitterSquare}  />
-              </Link>
-            </li>
-          )}
-          {social.facebook && (
-            <li>
-              <Link to={social.facebook} target="_blank" itemProp="url" className="social-icon-facebook">
-               <FontAwesomeIcon icon={faFacebookSquare}  />
-              </Link>
-            </li>
-          )}
+          {/*{social.instagram && (*/}
+          {/*  <li>*/}
+          {/*    <Link to={social.instagram} target="_blank" itemProp="url" className="social-icon-instagram">*/}
+          {/*      <FontAwesomeIcon icon={faInstagramSquare}  />*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*)}*/}
+          {/*{social.twitter && (*/}
+          {/*  <li>*/}
+          {/*    <Link to={social.twitter} target="_blank" itemProp="url" className="social-icon-twitter">*/}
+          {/*     <FontAwesomeIcon icon={faTwitterSquare}  />*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*)}*/}
+          {/*{social.facebook && (*/}
+          {/*  <li>*/}
+          {/*    <Link to={social.facebook} target="_blank" itemProp="url" className="social-icon-facebook">*/}
+          {/*     <FontAwesomeIcon icon={faFacebookSquare}  />*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*)}*/}
           </ul>
         </div>
       )}

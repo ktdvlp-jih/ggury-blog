@@ -30,7 +30,7 @@ collections:
               - widget: string
                 name: name
                 label: Name
-                default: 'Your Name'
+                default: 'Jeon Il-Hun'
                 required: true
               - widget: string
                 name: summary
