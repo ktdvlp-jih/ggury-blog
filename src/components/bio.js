@@ -64,14 +64,15 @@ const Bio = () => {
       )}
       {author.name && (
         <div>
-          <p>
-            Written by{" "}
-            <Link to={"/about"} className="bio-avatar-name">
-              @{author.name}
-            </Link>{" "}
+          <p className="bio-text">
+            Written by IlHun Jeon{" "}
+            {/*<Link to={"/about"} className="bio-avatar-name">*/}
+            {/*  @{author.name}*/}
+            {/*</Link>{" "}*/}
+             SpringBoot 개발자
           </p>
           {/*{author.summary && (*/}
-          {/*  <p className="bio-introduction">{author.summary}</p>*/}
+          {/*    <p className="bio-introduction">{author.summary}</p>*/}
           {/*)}*/}
           <ul className="bio-social">
           <li>

@@ -45,6 +45,37 @@ body.dark .category-container .item[aria-selected='true'] a {
 }
 /* dark end */
 
+/* light start */
+body.dark .bio-text{
+  color: #ffffff;
+}
+body.dark .category-container {
+  background-color: #1c1c1c;
+}
+
+body.dark .category-container .item {
+  border: 1px solid #1c1c1c;
+  background-color: #1c1c1c;
+}
+
+body.dark .category-container .item a {
+  color: #ffffff;
+}
+
+body.dark .category-container .item[aria-selected='true'] {
+  border: 1px solid #757575;
+  background-color: #757575;
+}
+
+body.dark .category-container .item[aria-selected='true'] a {
+  color: #ff;
+}
+body.dark a{
+  color: #ffffff;
+
+}
+/* light end */
+
 .category-container {
   position: sticky;
   position: -webkit-sticky;
