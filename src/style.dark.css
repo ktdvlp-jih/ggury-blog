@@ -72,13 +72,13 @@ body.dark .theme label svg {
 body.light .post-list-item header{
   color: #ffffff;
 }
-body.light .post-list-item header small{
+body.dark .post-list-item header small{
   color: #e9e9e9;
 }
-body.light .post-list-item p{
+body.dark .post-list-item p{
   color: #adadad;
 }
-body.light .post-list-item section .post-list-content ul li a{
+body.dark .post-list-item section .post-list-content ul li a{
   background-color: #626262;
   color: #ffffff;
 }
