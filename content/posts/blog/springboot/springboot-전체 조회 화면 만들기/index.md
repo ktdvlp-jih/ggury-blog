@@ -10,13 +10,30 @@ tags:
 ---
 # **전체 조회 화면 만들기**
 index.mustache에서 목록을 출력하는 부분을 추가해보겠습니다.
-### **header.mustache**
+## **\-header.mustache-**
 ```html
 <br/>
-<!--목록 출력 영역-->
-<table class="table table-horizontal table-bord"></table>
+<table class="table table-horizontal table-bordered">
+    <thead class="thead-strong">
+    <tr>
+        <th>게시글 번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>최종수정일</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    {{#posts}} <!--posts라는 List를 순회 (for문)-->
+    <tr>
+        <td>{{id}}</td> <!--List에서 뽑아낸 객체의 필드명-->
+        <td>{{title}}</td>
+        <td>{{author}}</td>
+        <td>{{modifiedDate}}</td>
+    </tr>
+    {{/posts}}
+    </tbody>
+</table>
 ```
-
 
 ### **header,footer레이아웃 작성**
 templates디렉토리에 header,footer.mustache파일을 생성합니다.
@@ -24,7 +41,7 @@ templates디렉토리에 header,footer.mustache파일을 생성합니다.
 css와 js는 파일 위치마다 경로가 달라질수 있으니 주의 해주세요
 header와footer부분에 사용하지 않는 css와 script가 작성되어 있지만 이부분은 그냥 넘어가도록 하겠습니다.(주석처리)
 
-### **header.mustache**
+## **\-header.mustache-**
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +64,8 @@ header와footer부분에 사용하지 않는 css와 script가 작성되어 있�
 </head>
 <body>
 ```
-### **footer.mustache**
+
+## **\-footer.mustache-**
 ```html
 <!-- Bootstrap core JavaScript-->
 <script src="/vendor/jquery/jquery.min.js"></script>
@@ -73,10 +91,14 @@ header와footer부분에 사용하지 않는 css와 script가 작성되어 있�
 </html>
 ```
 
-### **index.mustache**
+## **\-index.mustache-**
 목록 출력 영역 부분인 table ( 작성 게시판번호,제목,작성자,작성일자 )
-  1. {{#posts}}: List순회, 자바의 for문과 동일
-  2. {{id}}: List에서 뽑아낸 객체의 필드명
+### **{{#posts}}**
+* 데이터를 가져올 때 사용 (데이터 전송)
+
+### **{{id}}**
+* List에서 뽑아낸 객체의 필드명
+
 ```html
 {{>layout/header}}
 <h1>스프링 부트로 시작하는 웹서비스</h1>
@@ -113,7 +135,11 @@ header와footer부분에 사용하지 않는 css와 script가 작성되어 있�
 ```
 이후 Controller,Sevice,Repository코드 작성
 
-### **PostsRepository**
+## **\-PostsRepository-**
+여기선 SpringDataJpa에서 제공하지 않는 메소드로 @Query를 사용
+규모가 있는 프로젝트에서 데이터 조회는 FK의 조인, 복잡한 조건 등으로 인해 이런 Entity클래스만으로 처리하기 어려워 조회용 프레임 워크를 따로 추가합니다
+대표적으로 querydsl,jooq,MyBatis등이 있는데 대표적으로 조희는 querydsl 이것을 사용하고 등록/수정/삭제 등은 SpringDataJpa를 통해 진행합니다.
+
 ```java
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -128,11 +154,10 @@ public interface PostsRepository extends JpaRepository<Posts,Long> {
     List<Posts> findAllDesc();
 }
 ```
-여기선 SpringDataJpa에서 제공하지 않는 메소드로 @Query를 사용
-규모가 있는 프로젝트에서 데이터 조회는 FK의 조인, 복잡한 조건 등으로 인해 이런 Entity클래스만으로 처리하기 어려워 조회용 프레임 워크를 따로 추가합니다
-대표적으로 querydsl,jooq,MyBatis등이 있는데 대표적으로 조희는 querydsl 이것을 사용하고 등록/수정/삭제 등은 SpringDataJpa를 통해 진행합니다.
+### **@Query**
+* 사용자 정의 쿼리
 
-### **PostsService**
+## **\-PostsService-**
 ```java
 @RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
 @Service // 알맞은 정보를 가공 -> 비즈니스 로직을 수행 -> DB에접근하는 DAO(sql문을 실행할 수 잇는 객체 )이용해서 결과값을 받아옴
@@ -147,13 +172,23 @@ public class PostsService {
     }
 }
 ```
-PostsRepository에서 만들 메소드 findAllDesc의 트랜잭션 어노테이션에 옵셔이 추가 되고
-(readOnly=true)를 주면 트랜잭션 범위는 유지하되 조회 기능만 남겨두고 조회 속도가 개선 되기에 등록,삭제,수정 기능이 전혀 없는 서비스 메소드에서 
-사용하면 좋습니다.
-.map(PostsListResponseDto::new)는 .map(posts -> new PostsListResponseDto(posts) 이것과 뜻이 똑같습니다.
-postsRepository 결과로 넘어온 Posts의 Stream을 map을 통해 PostsListResponseDto변환 -> List로 반환 하는 메소드
+### **@Transactional(readOnly = true)**
+* (readOnly=true)를 주면 트랜잭션 범위는 유지하되 조회 기능만 남겨두고 조회 속도가 개선 되기에 등록,삭제,수정 기능이 전혀 없는 서비스 메소드에서
+  사용하면 좋습니다.
 
-### **PostsListResponseDto**
+### **stream()**
+* 컬렉션에 저장되어 있는 엘리먼트들을 하나씩 순회하면서 처리하는 코드패턴
+
+### **map**
+* .map(PostsListResponseDto::new)는 .map(posts -> new PostsListResponseDto(posts) 이것과 뜻이 똑같습니다.
+* postsRepository 결과로 넘어온 Posts의 Stream을 map을 통해 PostsListResponseDto변환 -> List로 반환 하는 메소드
+
+### **collect**
+* 지정된 값에서 목록 가져오기 결과를 리턴 받을수 있습니다.
+
+
+## **\-PostsListResponseDto-**
+* DB에서 꺼낸 데이터를 저장하는 Entity (DTO)
 ```java
 @Getter
 public class PostsListResponseDto {
@@ -170,9 +205,8 @@ public class PostsListResponseDto {
     }
 }
 ```
-DB에서 꺼낸 데이터를 저장하는 Entity (DTO)
 
-### **IndexController**
+## **\-IndexController-**
 ```java
 
 private final PostsService postsService;
@@ -186,10 +220,11 @@ public class PostsListResponseDto {
     }
 }
 ```
-Model: model 서버 템플릿 엔진에서 사용할 수 있는 객체를 저장 (postsService.findAllDesc()로 가져온 결과를 posts로 index.mustache에 전달)
+### **Model**
+* model 서버 템플릿 엔진에서 사용할 수 있는 객체를 저장 (postsService.findAllDesc()로 가져온 결과를 posts로 index.mustache에 전달)
 
 ## **\-테스트 코드 결과-**
-![spring-웹-계층](/assets/spring-웹-계층.png "spring-웹-계층")
+![게시판-조회-테스트-결과](/assets/게시판-조회-테스트-결과.png "게시판-조회-테스트-결과")
 
 
 
