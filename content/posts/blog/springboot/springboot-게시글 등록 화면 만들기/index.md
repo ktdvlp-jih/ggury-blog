@@ -12,7 +12,8 @@ tags:
 앞에서는 PostsApiController로 API를 구성했으나 여기선 바로 화면으로 개발하겠습니다.
 HTML이 아닌 부트스트랩을 통해 화면을 구성해 보도록 하겠습니다. 프론트엔드 라이브러리를 사용할 수 있는 방법은 외부 CDN 혹은 직접 라이브러리를 받아서 사용 하는 방식이 있는데
 외부가 아니 안정적으로 이용하기 위해 내부로 내려받아 사용해 보도록 하겠습니다.
-https://mafa.tistory.com/entry/5-Spring-Boot%EC%97%90-BootStrap-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0?category=1020270 해당 부분이 정리가 잘되어있어서 이부분을 참고해 주시면 되겠습니다.
+https://mafa.tistory.com/entry/5-Spring-Boot%EC%97%90-BootStrap-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0?category=1020270 
+해당 부분이 정리가 잘되어있어서 이부분을 참고해 주시면 되겠습니다.
 
 
 ### **header,footer레이아웃 작성**
