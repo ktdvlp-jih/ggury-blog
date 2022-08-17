@@ -170,6 +170,12 @@ public class PostsService {
                 .map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
     }
+
+    @Transactional
+    public void delete(Long id) {
+      Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id = " + id));
+      postsRepository.delete(posts);
+    }
 }
 ```
 ### **@Transactional(readOnly = true)**
@@ -225,58 +231,3 @@ public class PostsListResponseDto {
 
 ## **\-테스트 코드 결과-**
 ![게시판-조회-테스트-결과](/assets/게시판-조회-테스트-결과.png "게시판-조회-테스트-결과")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **posts-save.mustache**
-게시글을 작성할수있는 공간이며 등록 버튼을 통해 데이터를 게시판에 등록 할 수 있습니다.
-![게시글-등록](/assets/게시글-등록.png "게시글-등록")
-```html
-{{>layout/header}}
-<h1>게시글 등록</h1>
-<div class="col-md-12">
-    <div class="col-md-4">
-        <form>
-            <div class="form-group">
-                <label for="title">제목</label>
-                <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
-            </div>
-            <div class="form-group">
-                <label for="author">작성자</label>
-                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
-            </div>
-            <div class="form-group">
-                <label for="content">내용</label>
-                <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
-            </div>
-        </form>
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
-        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
-    </div>
-</div>
-{{>layout/footer}}
-```
-
-이후 h2-console을 접속해 실제 DB로 데이터가 등록되었는지 확인 할수 있습니다.
-![게시글-등록-성공](/assets/게시글-등록-성공.png "게시글-등록-성공")
