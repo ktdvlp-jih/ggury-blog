@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
 draft: false
-title: springboot 게시글 수정ㅡ삭제 화면 만들기
+title: springboot 게시글 수정-삭제 화면 만들기
 date: 2022-08-16T20:10:06.599Z
 category: SpringBoot
-description: SpringBoot 게시글 수정ㅡ삭제 화면 만들기
+description: SpringBoot 게시글 수정-삭제 화면 만들기
 tags: 
 - SpringBoot
 ---

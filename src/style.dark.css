@@ -34,9 +34,11 @@ body.dark a {
   color: var(--dark--color-primary);
 }
 
+
 body.dark a:hover,
 body.dark a:focus {
-  color: var(--dark--color-text-hover);
+  /*color: var(--dark--color-text-hover);*/
+
 }
 
 /* bio */
