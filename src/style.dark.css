@@ -37,7 +37,7 @@ body.dark a {
 
 body.dark a:hover,
 body.dark a:focus {
-  /*color: var(--dark--color-text-hover);*/
+  color: var(--dark--color-text-hover);
 
 }
 
@@ -87,3 +87,4 @@ body.dark .post-list-item section .post-list-content ul li a{
 body.dark{
  color: #ffffff;
 }
+
