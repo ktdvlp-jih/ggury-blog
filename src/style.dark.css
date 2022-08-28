@@ -12,11 +12,12 @@ body.dark h3,
 body.dark h4,
 body.dark h5,
 body.dark h6 {
-  color: var(--dark--color-heading);
+  color: var(--dark--color-heading-light);
 }
 
 body.dark h1 {
-  color: var(--dark--color-heading-black);
+  /*color: var(--dark--color-heading-black);*/
+  color: var(--dark--color-heading);
 }
 
 body.dark blockquote {
